@@ -27,17 +27,23 @@ class OnboardVC: UIViewController {
         }
     }
    
-    
+   
+
     
     let constant3 = "سهولة أداء إمتحاناتك والرجوع إليها في أي  وقت مع حلولها الصحيحة"
     let constant1 = "سجل حضورك بمجرد اظهار الكود الخاص بك"
     let constan2 = " متابعة شروحات المستر أول بأول من خلال  تحديثات قائمة الفيديوهات في كل مادة  "
+
     @IBOutlet weak var collectionView: UICollectionView!
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
-        slide = [SlideModel(image: UIImage(named: "onboard1")!, description:constant1 ),SlideModel(image: UIImage(named: "onboard2")!, description:constan2 ),SlideModel(image: UIImage(named: "onboard3")!, description:constant3 )]
-    
-     pageControl.numberOfPages = slide.count
+              
+        if let image1 = UIImage(named: "onboard1"),let image2 = UIImage(named: "onboard2"),let image3 = UIImage(named: "onboard3")  {
+            slide = [SlideModel(image: image1, description:constant1 ),SlideModel(image: image2, description:constan2 ),SlideModel(image: image3, description:constant3 )]
+                  }
+        
+        print(slide.count)
+        pageControl.numberOfPages = slide.count
         
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.autoSlide), userInfo: nil, repeats: true)
@@ -65,22 +71,31 @@ class OnboardVC: UIViewController {
         }else {
             currentPage += 1
             let index = IndexPath(item: currentPage, section: 0)
-                   collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            collectionView.isPagingEnabled = false
+            collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            collectionView.isPagingEnabled = true
         }
        
     }
     
     @objc func autoSlide(){
-      
+        
         if(pageControl.currentPage < (slide.count - 1)){
              currentPage += 1
             let index = IndexPath.init(item: currentPage, section: 0)
+           
+            collectionView.isPagingEnabled = false
             collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-          
+            collectionView.isPagingEnabled = true
+            	
         }else {
             currentPage = 0
             let index = IndexPath.init(item: currentPage, section: 0)
+            //collectionView.layoutIfNeeded()
+            collectionView.isPagingEnabled = false
             collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            collectionView.isPagingEnabled = true
+            
         }
     }
 }
@@ -91,9 +106,12 @@ extension OnboardVC : UICollectionViewDelegate, UICollectionViewDataSource , UIC
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OnboardCell
-        cell.setUp(slide[indexPath.row])
-        return cell
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OnboardCell
+            cell.setUp(slide[indexPath.row])
+            return cell
+        
+       
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
