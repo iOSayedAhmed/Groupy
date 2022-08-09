@@ -54,11 +54,11 @@ class HomeVC: UIViewController {
         presentDetail(nav)
     }
     
-    func showAlert( _ title:String , _ message:String , _ actionTitle:String) {
-           let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-           alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
-           present(alert, animated: true)
-       }
+//    func showAlert( _ title:String , _ message:String , _ actionTitle:String) {
+//           let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//           alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
+//           present(alert, animated: true)
+//       }
     @IBAction func examsListClickedButton(_ sender: UIButton) {
         print("Present Exams List ----> ")
        showAlert("تنوية", "نعمل من أجل حضراتكم ..  يتم العمل عليها ", "إلغاء")

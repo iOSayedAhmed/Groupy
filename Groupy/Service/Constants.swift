@@ -7,3 +7,9 @@
 //
 
 import Foundation
+struct Constants {
+    static let Baseurl = "https://eduelmester.site/elmester/student/"
+    
+    let LogPrameter = ["email":"sayed@gmail.com","password":"123456","id_address":""]
+    
+}

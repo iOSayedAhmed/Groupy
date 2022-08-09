@@ -51,14 +51,6 @@ class OnboardVC: UIViewController {
         
     
     }
-    func presentLoginVC() {
-       // let vc = UIViewController(nibName: "LoginVC", bundle: nil)
-        let vc = storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginVC
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
-    }
-   
-
     @IBAction func skipClickedButton(_ sender: Any) {
         presentLoginVC()
 
@@ -121,10 +113,6 @@ extension OnboardVC : UICollectionViewDelegate, UICollectionViewDataSource , UIC
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(collectionView.frame.width)
     }
-    
-    
-
-
 
 }
 

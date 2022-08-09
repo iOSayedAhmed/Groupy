@@ -435,7 +435,7 @@
         <!--الصفحة الرئيسية-->
         <scene sceneID="eAw-cd-l8v">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="FEH-kW-8sR" customClass="HomeVC" customModule="Groupy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="FEH-kW-8sR" customClass="HomeVC" customModule="Groupy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3L8-it-gnE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -643,7 +643,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="6HO-wa-zlF">
             <objects>
-                <tabBarController storyboardIdentifier="UITabBarController-6na-yH-JVa" modalPresentationStyle="fullScreen" id="6na-yH-JVa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" modalPresentationStyle="fullScreen" id="6na-yH-JVa" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BOw-W9-ixP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="auN-K5-oFN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -707,7 +707,7 @@
         <!--OnboardVC-->
         <scene sceneID="a8I-7E-yky">
             <objects>
-                <viewController id="Pex-Ly-OIF" customClass="OnboardVC" customModule="Groupy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardVC" id="Pex-Ly-OIF" customClass="OnboardVC" customModule="Groupy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u6a-jJ-get">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

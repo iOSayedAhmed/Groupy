@@ -8,6 +8,39 @@
 
 import UIKit
 extension UIViewController {
+    
+    // Alert Controller
+    func showAlert( _ title:String , _ message:String , _ actionTitle:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    //present Register View Controller
+    func presentRegisterVC() {
+        // let vc = UIViewController(nibName: "RegisterVC", bundle: nil)
+        let vc = storyboard?.instantiateViewController(identifier: "RegisterVC") as! RegisterVC
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    //present home View Controller
+    func presentHomeVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nibBundle).instantiateViewController(identifier: "TabBarController") as! UITabBarController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
+    // present login View Controller
+    func presentLoginVC() {
+        // let vc = UIViewController(nibName: "LoginVC", bundle: nil)
+        let vc = storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginVC
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
     // custom func for present View Controller as Navigation Controller
     func presentDetail(_ viewControllerTopresent : UIViewController){
         let transition = CATransition()
@@ -18,6 +51,7 @@ extension UIViewController {
         self.view.window?.layer.add(transition, forKey: kCATransition)
         present(viewControllerTopresent, animated: false, completion: nil)
     }
+    
     func presentSecondaryDetail(_ viewControllerTopresent : UIViewController){
         let transition = CATransition()
         transition.duration = 0.3
@@ -32,9 +66,6 @@ extension UIViewController {
         
         
     }
-    
-    
-    
     
     // custom func for dismiss View Controller as Navigation Controller
     func dismissDetail(){

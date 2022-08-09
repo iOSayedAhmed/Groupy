@@ -327,7 +327,6 @@
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="registerClickedButton:" destination="Ucn-aK-qsv" eventType="touchUpInside" id="uws-wO-CMl"/>
-                                                            <segue destination="Bz3-QV-dZy" kind="show" id="VOU-1q-pqg"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-qL-7Gz">
