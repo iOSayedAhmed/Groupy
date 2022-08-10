@@ -26,7 +26,7 @@ extension UIViewController {
     
     //present home View Controller
     func presentHomeVC() {
-        let vc = UIStoryboard(name: "Main", bundle: nibBundle).instantiateViewController(identifier: "TabBarController") as! UITabBarController
+        let vc = UIStoryboard(name: "Main", bundle: nibBundle).instantiateViewController(identifier: "TabBarContainer") as! TabBarContainer
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }

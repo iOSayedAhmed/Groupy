@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
  
-extension UIViewController {
-    
- 
+class Helpers {
+    static let shared = Helpers()
+
+     let defualts = UserDefaults.standard
     
 }

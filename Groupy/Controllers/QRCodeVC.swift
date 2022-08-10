@@ -2,7 +2,7 @@
 //  QRCodeVC.swift
 //  Groupy
 //
-//  Created by Develop on 10/08/2022.
+//  Created by Develop on 11/08/2022.
 //  Copyright © 2022 Develop. All rights reserved.
 //
 

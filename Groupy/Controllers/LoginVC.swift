@@ -39,7 +39,9 @@ class LoginVC: UIViewController {
                         print(" Successful Login")
                         print(userResponse?.email)
                         print(userResponse?.name)
-                        
+                        guard let userData = userResponse else {return}
+                        let userInfo : [String:Any] = ["id":userData.id,"name":userData.name,"email":userData.email,"phone":userData.phone]
+                        Helpers.shared.defualts.set(userInfo, forKey: "userInfo")
                         DispatchQueue.main.async {
                             self.presentHomeVC()
                         }
@@ -58,8 +60,6 @@ class LoginVC: UIViewController {
     @IBAction func registerClickedButton(_ sender: UIButton) {
         presentRegisterVC()
     }
-    
-    
     
 }
 

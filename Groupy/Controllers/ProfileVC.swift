@@ -9,6 +9,8 @@
 import UIKit
 
 class ProfileVC: UIViewController {
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -29,6 +31,16 @@ class ProfileVC: UIViewController {
         newPasswordTextField.underLined()
         confirmPasswordTextField.underLined()	
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let userInfo = Helpers.shared.defualts.object(forKey: "userInfo") as? [String:String] else {return}
+        
+        userNameLabel.text = userInfo["name"]
+        userEmailLabel.text = userInfo["email"]
+        nameTextField.text = userInfo["name"]
+        emailTextField.text = userInfo["email"]
+    }
+    
     @IBAction func ForgotPasswordClickedButton(_ sender: UIButton) {
     }
     

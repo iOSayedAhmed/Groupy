@@ -9,7 +9,9 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    @IBOutlet weak var userImage: UIImageView!
+    
+    @IBOutlet weak var userNameLabel: UILabel!
     let leftBarButton : UIButton = {
         let backButton = UIButton()
             backButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
@@ -26,6 +28,12 @@ class HomeVC: UIViewController {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        guard let userInfo = Helpers.shared.defualts.object(forKey: "userInfo") as? [String:String] else {return}
+        userNameLabel.text = userInfo["name"]
+    }
+    
+    
     //MARK:- Functions
     
     @objc func backButtonClicked() {

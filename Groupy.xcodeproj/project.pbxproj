@@ -11,6 +11,9 @@
 		BA4D84AB28285559007D6867 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D84A928285559007D6867 /* LoginVC.swift */; };
 		BA62A878282ACDCE00CEB876 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62A877282ACDCE00CEB876 /* Utilites.swift */; };
 		BA62A87A282AD95D00CEB876 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA62A879282AD95D00CEB876 /* ProfileVC.swift */; };
+		BAA3D80528A46B6400C7EF94 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3D80428A46B6400C7EF94 /* SettingVC.swift */; };
+		BAA3D80728A46B8000C7EF94 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3D80628A46B8000C7EF94 /* QRCodeVC.swift */; };
+		BAA3D80928A46BBC00C7EF94 /* TabBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3D80828A46BBC00C7EF94 /* TabBarContainer.swift */; };
 		BAA8482F282900E800D42CE6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8482D282900E800D42CE6 /* RegisterVC.swift */; };
 		BAAED45428A25F4500DB8B1A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED45328A25F4500DB8B1A /* Helpers.swift */; };
 		BAB8276F2834FDB800A251D0 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB827712834FDB800A251D0 /* RegisterStoryboard.storyboard */; };
@@ -41,6 +44,9 @@
 		BA4D84A928285559007D6867 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BA62A877282ACDCE00CEB876 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		BA62A879282AD95D00CEB876 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		BAA3D80428A46B6400C7EF94 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		BAA3D80628A46B8000C7EF94 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		BAA3D80828A46BBC00C7EF94 /* TabBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainer.swift; sourceTree = "<group>"; };
 		BAA8482D282900E800D42CE6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		BAAED45328A25F4500DB8B1A /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BAB827702834FDB800A251D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
@@ -125,10 +131,13 @@
 				BAD40DBB2827C0F1006AF832 /* OnboardVC.swift */,
 				BA4D84A928285559007D6867 /* LoginVC.swift */,
 				BAA8482D282900E800D42CE6 /* RegisterVC.swift */,
+				BAA3D80828A46BBC00C7EF94 /* TabBarContainer.swift */,
 				BAC7B6F8282A6F4800569288 /* HomeVC.swift */,
+				BAA3D80628A46B8000C7EF94 /* QRCodeVC.swift */,
+				BAA3D80428A46B6400C7EF94 /* SettingVC.swift */,
+				BA62A879282AD95D00CEB876 /* ProfileVC.swift */,
 				BAC7B6FC282A920100569288 /* VideosList.swift */,
 				BAC7B6FE282A927000569288 /* Navigation.swift */,
-				BA62A879282AD95D00CEB876 /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,11 +338,13 @@
 				BAD40DD42827EA5F006AF832 /* OnboardCell.swift in Sources */,
 				BABC76262864465F002ED34E /* APIServices.swift in Sources */,
 				BAC7B6FF282A927000569288 /* Navigation.swift in Sources */,
+				BAA3D80528A46B6400C7EF94 /* SettingVC.swift in Sources */,
 				BA4D84AB28285559007D6867 /* LoginVC.swift in Sources */,
 				BABC762828644745002ED34E /* Constants.swift in Sources */,
 				BAD40DB82827C0F1006AF832 /* AppDelegate.swift in Sources */,
 				BAA8482F282900E800D42CE6 /* RegisterVC.swift in Sources */,
 				BAD40DD62827EB0D006AF832 /* SlideModel.swift in Sources */,
+				BAA3D80728A46B8000C7EF94 /* QRCodeVC.swift in Sources */,
 				BAC7B6FB282A7FA600569288 /* UIView + Extensions.swift in Sources */,
 				BAD40DBA2827C0F1006AF832 /* SceneDelegate.swift in Sources */,
 				BAAED45428A25F4500DB8B1A /* Helpers.swift in Sources */,
@@ -341,6 +352,7 @@
 				BAC7B6FD282A920100569288 /* VideosList.swift in Sources */,
 				BABC762A28644CF3002ED34E /* UserModel.swift in Sources */,
 				BA62A878282ACDCE00CEB876 /* Utilites.swift in Sources */,
+				BAA3D80928A46BBC00C7EF94 /* TabBarContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
