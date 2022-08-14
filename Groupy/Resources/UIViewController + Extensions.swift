@@ -9,11 +9,30 @@
 import UIKit
 extension UIViewController {
     
+    // Set Indentifier to View Controller using it's name
+    
+    static var indenteifier:String {
+        return String(describing: self)
+    }
+    
+    static func instantiate() -> Self {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: indenteifier) as! Self
+    }
+    
+    
     // Alert Controller
     func showAlert( _ title:String , _ message:String , _ actionTitle:String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
         present(alert, animated: true)
+    }
+    
+    //present Onboarding View Controller
+    func presentOnboardVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nibBundle).instantiateViewController(identifier: "OnboardVC") as! OnboardVC
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     //present Register View Controller

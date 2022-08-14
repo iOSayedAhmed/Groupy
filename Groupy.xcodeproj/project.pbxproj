@@ -15,7 +15,7 @@
 		BAA3D80728A46B8000C7EF94 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3D80628A46B8000C7EF94 /* QRCodeVC.swift */; };
 		BAA3D80928A46BBC00C7EF94 /* TabBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3D80828A46BBC00C7EF94 /* TabBarContainer.swift */; };
 		BAA8482F282900E800D42CE6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8482D282900E800D42CE6 /* RegisterVC.swift */; };
-		BAAED45428A25F4500DB8B1A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED45328A25F4500DB8B1A /* Helpers.swift */; };
+		BAAED45428A25F4500DB8B1A /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED45328A25F4500DB8B1A /* LocalState.swift */; };
 		BAB8276F2834FDB800A251D0 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB827712834FDB800A251D0 /* RegisterStoryboard.storyboard */; };
 		BABC76262864465F002ED34E /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC76252864465F002ED34E /* APIServices.swift */; };
 		BABC762828644745002ED34E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC762728644745002ED34E /* Constants.swift */; };
@@ -48,7 +48,7 @@
 		BAA3D80628A46B8000C7EF94 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		BAA3D80828A46BBC00C7EF94 /* TabBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainer.swift; sourceTree = "<group>"; };
 		BAA8482D282900E800D42CE6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
-		BAAED45328A25F4500DB8B1A /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BAAED45328A25F4500DB8B1A /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		BAB827702834FDB800A251D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		BABC76252864465F002ED34E /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		BABC762728644745002ED34E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA12460228A50B0400C8F386 /* LocalState */ = {
+			isa = PBXGroup;
+			children = (
+				BAAED45328A25F4500DB8B1A /* LocalState.swift */,
+			);
+			path = LocalState;
+			sourceTree = "<group>";
+		};
 		BABC762428644648002ED34E /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +122,9 @@
 		BAD40DB62827C0F1006AF832 /* Groupy */ = {
 			isa = PBXGroup;
 			children = (
-				BABC762428644648002ED34E /* Service */,
 				BAD40DCF2827D702006AF832 /* Basic */,
+				BA12460228A50B0400C8F386 /* LocalState */,
+				BABC762428644648002ED34E /* Service */,
 				BAD40DCE2827D6EE006AF832 /* Resources */,
 				BAD40DCD2827D6E5006AF832 /* Models */,
 				BAD40DCC2827D6DA006AF832 /* Views */,
@@ -168,7 +177,6 @@
 				BAC7B6FA282A7FA600569288 /* UIView + Extensions.swift */,
 				BAC7B700282A963B00569288 /* UIViewController + Extensions.swift */,
 				BA62A877282ACDCE00CEB876 /* Utilites.swift */,
-				BAAED45328A25F4500DB8B1A /* Helpers.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -347,7 +355,7 @@
 				BAA3D80728A46B8000C7EF94 /* QRCodeVC.swift in Sources */,
 				BAC7B6FB282A7FA600569288 /* UIView + Extensions.swift in Sources */,
 				BAD40DBA2827C0F1006AF832 /* SceneDelegate.swift in Sources */,
-				BAAED45428A25F4500DB8B1A /* Helpers.swift in Sources */,
+				BAAED45428A25F4500DB8B1A /* LocalState.swift in Sources */,
 				BAC7B701282A963B00569288 /* UIViewController + Extensions.swift in Sources */,
 				BAC7B6FD282A920100569288 /* VideosList.swift in Sources */,
 				BABC762A28644CF3002ED34E /* UserModel.swift in Sources */,

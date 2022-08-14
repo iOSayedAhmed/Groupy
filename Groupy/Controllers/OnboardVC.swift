@@ -8,10 +8,20 @@
 
 import UIKit
 
+
+//MARK: Prorocols
+
+//protocol OnboardVCDelegate : AnyObject {
+//    func finishOnboarding()
+//}
+
+
 class OnboardVC: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+   // weak var delegate:OnboardVCDelegate?
     var slide = [SlideModel]()
     var timer = Timer()
     var currentPage = 0 {
@@ -37,6 +47,8 @@ class OnboardVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        
               
         if let image1 = UIImage(named: "onboard1"),let image2 = UIImage(named: "onboard2"),let image3 = UIImage(named: "onboard3")  {
             slide = [SlideModel(image: image1, description:constant1 ),SlideModel(image: image2, description:constan2 ),SlideModel(image: image3, description:constant3 )]
@@ -52,13 +64,16 @@ class OnboardVC: UIViewController {
     
     }
     @IBAction func skipClickedButton(_ sender: Any) {
+        LocalState.hasOnboarded = true
         presentLoginVC()
+        
 
         
     }
     
     @IBAction func NextClickedButton(_ sender: Any) {
         if currentPage == slide.count - 1 {
+            LocalState.hasOnboarded = true
             presentLoginVC()
         }else {
             currentPage += 1
