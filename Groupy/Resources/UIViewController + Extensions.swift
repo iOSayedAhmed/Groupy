@@ -7,7 +7,7 @@
 //
 
 import UIKit
-extension UIViewController {
+extension UIViewController  {
     
     // Set Indentifier to View Controller using it's name
     
@@ -47,6 +47,7 @@ extension UIViewController {
     func presentHomeVC() {
         let vc = UIStoryboard(name: "Main", bundle: nibBundle).instantiateViewController(identifier: "TabBarContainer") as! TabBarContainer
         vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .flipHorizontal
         present(vc, animated: true, completion: nil)
     }
     
@@ -96,4 +97,17 @@ extension UIViewController {
         self.view.window?.layer.add(transition, forKey: kCATransition)
         dismiss(animated: false, completion: nil)
     }
+    
+    // Function To create
+    
+    func createBarButtonItem()  {
+             title = "قوائم الفيديوهات"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrow.left"), style: .done, target: self, action: #selector(ButtonClicked))
+        navigationItem.leftBarButtonItem?.tintColor = .white
+    }
+    
+    @objc func ButtonClicked() {
+        self.dismissDetail()
+    }
+    
 }
