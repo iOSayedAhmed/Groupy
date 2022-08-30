@@ -9,19 +9,11 @@
 import UIKit
 
 
-//MARK: Prorocols
-
-//protocol OnboardVCDelegate : AnyObject {
-//    func finishOnboarding()
-//}
-
-
 class OnboardVC: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
-   // weak var delegate:OnboardVCDelegate?
     var slide = [SlideModel]()
     var timer = Timer()
     var currentPage = 0 {
