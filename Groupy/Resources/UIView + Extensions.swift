@@ -119,3 +119,15 @@ extension UIView {
     }
     
 }
+extension UIView {
+    
+    func setUnderLine(x:CGFloat,y:CGFloat,width:CGFloat, height:CGFloat ) {
+            let bottomLine = CALayer()
+            bottomLine.frame = CGRect(x: x, y: y, width: width , height: height )
+            bottomLine.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+            self.layer.addSublayer(bottomLine)
+
+        }
+    
+    
+}
