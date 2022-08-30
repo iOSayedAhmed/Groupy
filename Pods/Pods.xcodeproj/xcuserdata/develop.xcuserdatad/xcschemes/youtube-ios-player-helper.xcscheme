@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "262FFE5487DBEAC69BC6A65720C9B6A3"
-               BuildableName = "Pods_Groupy.framework"
-               BlueprintName = "Pods-Groupy"
+               BlueprintIdentifier = "D1A7AF186BE136DE56FD5699070589B8"
+               BuildableName = "youtube_ios_player_helper.framework"
+               BlueprintName = "youtube-ios-player-helper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

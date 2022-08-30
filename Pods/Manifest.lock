@@ -1,16 +1,24 @@
 PODS:
   - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.9)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - DropDown
+  - IQKeyboardManagerSwift
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
     - DropDown
+    - IQKeyboardManagerSwift
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: c9468f1c2045ae2cf2ffad070cb492e78642368e
+PODFILE CHECKSUM: ce6d282dcc84fb9d1e8f9e80a0e22330a222f611
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

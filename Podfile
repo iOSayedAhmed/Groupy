@@ -7,4 +7,6 @@ target 'Groupy' do
 	
   # Pods for Groupy
 	pod 'DropDown'
+	pod 'IQKeyboardManagerSwift'
+	pod'youtube-ios-player-helper'
 end
