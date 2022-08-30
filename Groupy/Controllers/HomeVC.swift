@@ -8,20 +8,25 @@
 
 import UIKit
 
+
+
 class HomeVC: UIViewController {
-    @IBOutlet weak var userImage: UIImageView!
     
+    var parameters = [String:String]()
+    var lists :[String:Any]?
+    
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     let leftBarButton : UIButton = {
         let backButton = UIButton()
-            backButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
-            backButton.addTarget(self, action: #selector(backButtonClicked), for: .touchUpInside)
+        backButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+        backButton.addTarget(self, action: #selector(backButtonClicked), for: .touchUpInside)
         
         return backButton
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
         tabBarController?.tabBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
@@ -29,8 +34,7 @@ class HomeVC: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        guard let userInfo = Helpers.shared.defualts.object(forKey: "userInfo") as? [String:String] else {return}
-        userNameLabel.text = userInfo["name"]
+        
     }
     
     
@@ -42,38 +46,81 @@ class HomeVC: UIViewController {
     
     
     @IBAction func videosListClickedButton(_ sender: UIButton) {
+        parameters = ["grade":"1"]
         
-        let vc = storyboard?.instantiateViewController(identifier: "VideosList") as! VideosList
-        let nav = UINavigationController(rootViewController: vc)
-//        nav.navigationBar.tintColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
-//        nav.navigationBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+        self.getVideosLists()
         
-        if #available(iOS 15, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor(red: 0.19, green: 0.238, blue: 0.2855, alpha: 1)
-            appearance.titleTextAttributes = [.foregroundColor : UIColor.white]
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        }
-        nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-	        vc.title  = "قوائم الفيديوهات"
-        nav.modalPresentationStyle = .fullScreen
-        presentDetail(nav)
     }
     
-//    func showAlert( _ title:String , _ message:String , _ actionTitle:String) {
-//           let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//           alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
-//           present(alert, animated: true)
-//       }
+    
+    
+    
+    
     @IBAction func examsListClickedButton(_ sender: UIButton) {
         print("Present Exams List ----> ")
-       showAlert("تنوية", "نعمل من أجل حضراتكم ..  يتم العمل عليها ", "إلغاء")
-
+        showAlert("تنوية", "نعمل من أجل حضراتكم ..  يتم العمل عليها ", "إلغاء")
+        
     }
     
-    
-    
-
+    func getVideosLists() {
+        
+        
+        
+        APIServices.shared.postRequest(url: "select_viedo_list.php", parameter: self.parameters, method: nil, headers: nil) { [self]  (lists:[VideoListsModel]? , error) in
+            
+            if let error = error {
+                print("faild in fetch data",error.localizedDescription)
+            }else {
+                guard let lists = lists else {return}
+                
+                DispatchQueue.main.async
+                { print("Success ", lists)
+                    let vc = storyboard?.instantiateViewController(identifier: "VideosLists") as! VideosLists
+                    vc.lists = lists
+                    let nav = UINavigationController(rootViewController: vc)
+                    nav.navigationBar.tintColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+                    nav.navigationBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+                    if #available(iOS 15, *) {
+                        let appearance = UINavigationBarAppearance()
+                        appearance.configureWithOpaqueBackground()
+                        appearance.backgroundColor = UIColor(red: 0.19, green: 0.238, blue: 0.2855, alpha: 1)
+                        appearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+                        UINavigationBar.appearance().standardAppearance = appearance
+                        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+                        
+                        nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+                        vc.title  = "قوائم الفيديوهات"
+                        nav.modalPresentationStyle = .fullScreen
+                    }
+                    self.presentDetail(nav)
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        func presentNAVListVideos() {
+            let vc = storyboard?.instantiateViewController(identifier: "VideosLists") as! VideosLists
+            
+            let nav = UINavigationController(rootViewController: vc)
+            nav.navigationBar.tintColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+            nav.navigationBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+            if #available(iOS 15, *) {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = UIColor(red: 0.19, green: 0.238, blue: 0.2855, alpha: 1)
+                appearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+                UINavigationBar.appearance().standardAppearance = appearance
+                UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            }
+            nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            vc.title  = "قوائم الفيديوهات"
+            nav.modalPresentationStyle = .fullScreen
+            
+            self.presentDetail(nav)
+        }
+        
+    }
 }
