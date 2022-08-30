@@ -11,10 +11,10 @@ import UIKit
  
 class LocalState {
     static let shared = LocalState()
-     let defualts = UserDefaults.standard
     
     private enum Keys:String {
         case hasOnboarded
+        case userInfo
     }
     
     public static var hasOnboarded:Bool {
@@ -24,6 +24,16 @@ class LocalState {
         
         set(newValue){
             UserDefaults.standard.set(newValue, forKey: Keys.hasOnboarded.rawValue)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    public static var userInfo:[String:Any] {
+        get {
+            return UserDefaults.standard.dictionary(forKey: Keys.userInfo.rawValue)!
+        }
+        set(newValue){
+            UserDefaults.standard.set(newValue, forKey: Keys.userInfo.rawValue)
             UserDefaults.standard.synchronize()
         }
     }
