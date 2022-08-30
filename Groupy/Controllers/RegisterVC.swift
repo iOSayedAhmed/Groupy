@@ -18,6 +18,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var parameters = [String:String]()
     
     
     var educationalLevel : DropDown = {
@@ -32,6 +33,17 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        [emailTextField,userNameTextField,phoneNumberTextField,passwordTextField].forEach {
+            $0?.delegate = self
+        }
+        setupDropDwonList()
+        
+    }
+    
+    //MARK: - Functions
+    
+    func setupDropDwonList(){
         educationalLevel.anchorView = educationalLevelContainer
         educationalLevel.bottomOffset = CGPoint(x: 0, y: (educationalLevelLabel.frame.height))
         educationalLevel.topOffset = CGPoint(x: 0, y: -(educationalLevelLabel.frame.height))
@@ -51,11 +63,9 @@ class RegisterVC: UIViewController {
             self.educationalLevelLabel.textColor = .black
             print("selected : \(index)and title : \(item)")
         }
-        
-        
-        
-        
     }
+    
+    
     
     @objc func educationalLevelListClicked(){
         
@@ -67,31 +77,7 @@ class RegisterVC: UIViewController {
         
         //TODO
         // 1- insert Student
-        if let name = userNameTextField.text , let password = passwordTextField.text, let email = emailTextField.text, let phase = educationalLevelLabel.text , let phone = phoneNumberTextField.text , !email.isEmpty && !password.isEmpty , !name.isEmpty , !phase.isEmpty , !phone.isEmpty {
-            
-            if phone.count == 11 {
-                DispatchQueue.global(qos: .background).async {
-                    APIServices.shared.registerRequest(url: "insert_student.php", email: email, name: name, password: password, phone: phone, phase: phase) { responseMSG in
-                        DispatchQueue.main.async {
-                            self.showAlert("خطأ", responseMSG!, "Ok")
-                        }
-                        
-                    }
-                }
-                
-            }else {
-                DispatchQueue.main.async {
-                    self.showAlert("خطأ", "رقم الموبايل يجب ان يكون ١١ رقم", "تم")
-                }
-                
-            }
-        } else {
-            DispatchQueue.main.async {
-                self.showAlert("خطأ", "من فضلك أملأ جميع البيانات", "تم")
-            }
-            
-            
-        }
+        registerNewUser()
         
     }
     
@@ -99,7 +85,55 @@ class RegisterVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+extension RegisterVC : UITextFieldDelegate {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
     
     
+    //MARK: - Functions
     
+    func registerNewUser()  {
+        if let name = userNameTextField.text , let password = passwordTextField.text, let email = emailTextField.text, let phase = educationalLevelLabel.text , let phone = phoneNumberTextField.text , !email.isEmpty && !password.isEmpty , !name.isEmpty , !phase.isEmpty , !phone.isEmpty {
+            parameters = ["email":email,"password":password,"name":name,"phone":phone,"phase":phase]
+            
+            if phone.count == 11 {
+                DispatchQueue.global(qos: .background).async {
+                    APIServices.shared.registerRequest(url: "insert_student.php", parameters: self.parameters) { responseMSG , isSuccess in
+                        print(responseMSG)
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "تنبية", message: responseMSG, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "تـم", style: .cancel, handler: { _ in
+                                if isSuccess {
+                                    let userInfo : [String:Any] = ["name":name,"email":email,"phone":phone]
+                                    self.presentLoginVC()
+                                    
+                                }else {
+                                    print("can't Register..")
+                                }
+                                
+                            }))
+                            
+                            self.present(alert, animated:true)
+                            
+                        }
+                    }
+                }
+                
+            }else {
+                DispatchQueue.main.async {
+                    self.showAlert("تنبية", "رقم الموبايل يجب ان يكون ١١ رقم ❌", "تـم")
+                }
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.showAlert("تنبية ", "من فضلك أملأ جميع البيانات ❌", "تـم")
+            }
+            
+        }
+    }
 }
