@@ -12,9 +12,14 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var parameters = [String:String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        [emailTextField,passwordTextField].forEach {
+            $0?.delegate = self
+        }
+    
     }
     
     @IBAction func forgotPasswordClickedButton(_ sender: UIButton) {
@@ -24,27 +29,43 @@ class LoginVC: UIViewController {
         
                 //TODO
                 // login
+            loginUser()
+    }
+    
+    @IBAction func registerClickedButton(_ sender: UIButton) {
+        presentRegisterVC()
+    }
+    
+    func loginUser() {
         if let email = emailTextField.text , let password = passwordTextField.text , !email.isEmpty && !password.isEmpty  {
+            parameters = ["email":email,"password":password,"id_addess":""]
             DispatchQueue.global(qos: .background).async {
-                APIServices.shared.loginRequest(url: "student_login.php", email: email, password: password, idAddress: "") { (userResponse:UserModel?,error) in
+                APIServices.shared.postRequest(url: "student_login.php", parameter: self.parameters, method: nil, headers: nil ){ (userResponse:UserModel?,error) in
                     if let error = error {
                         //TODO
                         //Alart
                         DispatchQueue.main.async {
-                            self.showAlert("Error", error.localizedDescription, "OK")
+                            self.showAlert("خطأ ❌", "من فضلك تأكد من البريد الإلكتروني وكلمة السر ", "تـم")
                         }
                         print(error)
                         
                     }else {
                         print(" Successful Login")
-                        print(userResponse?.email)
+                        print(userResponse?.phone)
                         print(userResponse?.name)
                         guard let userData = userResponse else {return}
                         let userInfo : [String:Any] = ["id":userData.id,"name":userData.name,"email":userData.email,"phone":userData.phone]
-                        Helpers.shared.defualts.set(userInfo, forKey: "userInfo")
-                        DispatchQueue.main.async {
-                            self.presentHomeVC()
-                        }
+                        LocalState.userInfo = userInfo
+                        self.presentHomeVC()
+//                        DispatchQueue.main.async {
+//                            let alert = UIAlertController(title: "تم بنجاح", message: "تم تسجيل الدخول بنجاح ✅", preferredStyle: .alert)
+//                            alert.addAction(UIAlertAction(title: "تـم", style: .cancel, handler: { _ in
+//                                self.presentHomeVC()
+//                            }))
+//
+//                            self.present(alert, animated:true)
+//
+//                        }
                         
                     }
                     
@@ -56,9 +77,6 @@ class LoginVC: UIViewController {
             }
             
         }
-    }
-    @IBAction func registerClickedButton(_ sender: UIButton) {
-        presentRegisterVC()
     }
     
 }
@@ -75,4 +93,16 @@ extension UITextField {
     }
     
 }
-
+extension LoginVC : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.endEditing(true)
+         passwordTextField.endEditing(true)
+    return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+}
