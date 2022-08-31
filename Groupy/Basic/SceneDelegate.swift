@@ -21,12 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         var controller : UIViewController!
-        controller = HomeVC.instantiate()
-//        if LocalState.hasOnboarded {
-//            controller = LoginVC.instantiate()
-//        }else {
-//            controller = OnboardVC.instantiate()
-//        }
+      //  controller = HomeVC.instantiate()
+        if LocalState.hasOnboarded {
+            controller = LoginVC.instantiate()
+        }else {
+            controller = OnboardVC.instantiate()
+        }
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
         
