@@ -54,7 +54,7 @@ class LoginVC: UIViewController {
                         print(userResponse?.phone)
                         print(userResponse?.name)
                         guard let userData = userResponse else {return}
-                        let userInfo : [String:Any] = ["id":userData.id,"name":userData.name,"email":userData.email,"phone":userData.phone]
+                        let userInfo : [String:Any] = ["id":userData.id,"name":userData.name,"email":userData.email,"phone":userData.phone ,"grade":userData.grade , "groubId":userData.group_id]
                         LocalState.userInfo = userInfo
                         self.presentHomeVC()
 //                        DispatchQueue.main.async {
