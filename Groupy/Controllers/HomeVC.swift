@@ -13,20 +13,16 @@ import UIKit
 class HomeVC: UIViewController {
     
     var parameters = [String:String]()
-    var lists :[String:Any]?
-    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     let leftBarButton : UIButton = {
         let backButton = UIButton()
         backButton.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         backButton.addTarget(self, action: #selector(backButtonClicked), for: .touchUpInside)
-        
         return backButton
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
         tabBarController?.tabBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
@@ -34,7 +30,8 @@ class HomeVC: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        
+        guard let userName = LocalState.userInfo["name"] as? String else {return}
+        userNameLabel.text = userName
     }
     
     
@@ -46,9 +43,15 @@ class HomeVC: UIViewController {
     
     
     @IBAction func videosListClickedButton(_ sender: UIButton) {
-        parameters = ["grade":"1"]
         
-        self.getVideosLists()
+        guard let grade = LocalState.userInfo["grade"] as? String , let groupId = LocalState.userInfo["groubId"] as? String else {return}
+        
+      if groupId == "0" {
+          showAlert("تنبية", "من فضلك تواصل مع المدرس لإضافتك لمجموعة", "تم")
+      } else {
+          parameters = ["grade":grade]
+          self.getVideosLists()
+      }
         
     }
     
