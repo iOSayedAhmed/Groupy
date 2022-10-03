@@ -26,7 +26,10 @@
 		BABC762828644745002ED34E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC762728644745002ED34E /* Constants.swift */; };
 		BABC762A28644CF3002ED34E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC762928644CF3002ED34E /* UserModel.swift */; };
 		BABC762D28646AB8002ED34E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BABC762C28646AB8002ED34E /* Alamofire */; };
-		BABC763028646C81002ED34E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = BABC762F28646C81002ED34E /* SwiftyJSON */; };
+		BAC109B628E9A8D80087B135 /* Exams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC109B528E9A8D80087B135 /* Exams.storyboard */; };
+		BAC109BA28E9AA1B0087B135 /* ExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC109B828E9AA1B0087B135 /* ExamTableViewCell.swift */; };
+		BAC109BB28E9AA1B0087B135 /* ExamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC109B928E9AA1B0087B135 /* ExamTableViewCell.xib */; };
+		BAC109C228E9B23F0087B135 /* ExamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC109C128E9B23F0087B135 /* ExamsVC.swift */; };
 		BAC7B6F9282A6F4800569288 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC7B6F8282A6F4800569288 /* HomeVC.swift */; };
 		BAC7B6FB282A7FA600569288 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC7B6FA282A7FA600569288 /* UIView + Extensions.swift */; };
 		BAC7B6FD282A920100569288 /* VideosLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC7B6FC282A920100569288 /* VideosLists.swift */; };
@@ -47,7 +50,7 @@
 		33EA0B9151CA46F6E57E9FE3 /* Pods-Groupy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groupy.release.xcconfig"; path = "Target Support Files/Pods-Groupy/Pods-Groupy.release.xcconfig"; sourceTree = "<group>"; };
 		5F7E4B7BC8C327324E49F97D /* Pods-Groupy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groupy.debug.xcconfig"; path = "Target Support Files/Pods-Groupy/Pods-Groupy.debug.xcconfig"; sourceTree = "<group>"; };
 		9077E831D06518ADA9878065 /* Pods_Groupy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Groupy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA0DA67428ABC3A700BACF8F /* VideosListsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideosListsCell.swift; path = Groupy/Controllers/VideosListsCell.swift; sourceTree = SOURCE_ROOT; };
+		BA0DA67428ABC3A700BACF8F /* VideosListsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideosListsCell.swift; path = Groupy/VideosListsCell.swift; sourceTree = SOURCE_ROOT; };
 		BA4D84A928285559007D6867 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BA62A877282ACDCE00CEB876 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BA62A879282AD95D00CEB876 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -64,6 +67,10 @@
 		BABC76252864465F002ED34E /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		BABC762728644745002ED34E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BABC762928644CF3002ED34E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BAC109B528E9A8D80087B135 /* Exams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exams.storyboard; sourceTree = "<group>"; };
+		BAC109B828E9AA1B0087B135 /* ExamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTableViewCell.swift; sourceTree = "<group>"; };
+		BAC109B928E9AA1B0087B135 /* ExamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamTableViewCell.xib; sourceTree = "<group>"; };
+		BAC109C128E9B23F0087B135 /* ExamsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsVC.swift; sourceTree = "<group>"; };
 		BAC7B6F8282A6F4800569288 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BAC7B6FA282A7FA600569288 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		BAC7B6FC282A920100569288 /* VideosLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosLists.swift; sourceTree = "<group>"; };
@@ -87,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABC763028646C81002ED34E /* SwiftyJSON in Frameworks */,
 				649E20D613817C87E152AD9F /* Pods_Groupy.framework in Frameworks */,
 				BABC762D28646AB8002ED34E /* Alamofire in Frameworks */,
 			);
@@ -111,6 +117,35 @@
 				BABC76252864465F002ED34E /* APIServices.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		BAC109B728E9A8F00087B135 /* VideoCell */ = {
+			isa = PBXGroup;
+			children = (
+				BABAC88828AE97B500C3F106 /* VideoCell.swift */,
+				BABAC88928AE97B500C3F106 /* VideoCell.xib */,
+			);
+			path = VideoCell;
+			sourceTree = "<group>";
+		};
+		BAC109BC28E9AA200087B135 /* ExamTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BAC109B828E9AA1B0087B135 /* ExamTableViewCell.swift */,
+				BAC109B928E9AA1B0087B135 /* ExamTableViewCell.xib */,
+			);
+			path = ExamTableViewCell;
+			sourceTree = "<group>";
+		};
+		BAC109C028E9AEB60087B135 /* Storybords */ = {
+			isa = PBXGroup;
+			children = (
+				BAD40DBD2827C0F1006AF832 /* Main.storyboard */,
+				BAC109B528E9A8D80087B135 /* Exams.storyboard */,
+				BAB827712834FDB800A251D0 /* RegisterStoryboard.storyboard */,
+				BAD40DC22827C0F2006AF832 /* LaunchScreen.storyboard */,
+			);
+			path = Storybords;
 			sourceTree = "<group>";
 		};
 		BAD40DAB2827C0F1006AF832 = {
@@ -140,7 +175,7 @@
 				BAD40DCE2827D6EE006AF832 /* Resources */,
 				BAD40DCD2827D6E5006AF832 /* Models */,
 				BAD40DCC2827D6DA006AF832 /* Views */,
-				BAD40DCB2827D6C6006AF832 /* Controllers */,
+				BA0DA67428ABC3A700BACF8F /* VideosListsCell.swift */,
 				BAD40DC52827C0F2006AF832 /* Info.plist */,
 			);
 			path = Groupy;
@@ -160,6 +195,7 @@
 				BAC7B6FC282A920100569288 /* VideosLists.swift */,
 				BAFCC7E328AC1D6B007CD5A9 /* ListsOfVideos.swift */,
 				BAC7B6FE282A927000569288 /* Navigation.swift */,
+				BAC109C128E9B23F0087B135 /* ExamsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,13 +203,11 @@
 		BAD40DCC2827D6DA006AF832 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BAC109C028E9AEB60087B135 /* Storybords */,
+				BAD40DCB2827D6C6006AF832 /* Controllers */,
 				BAD40DD02827E9B1006AF832 /* Onboarding */,
-				BA0DA67428ABC3A700BACF8F /* VideosListsCell.swift */,
-				BAD40DBD2827C0F1006AF832 /* Main.storyboard */,
-				BAB827712834FDB800A251D0 /* RegisterStoryboard.storyboard */,
-				BAD40DC22827C0F2006AF832 /* LaunchScreen.storyboard */,
-				BABAC88828AE97B500C3F106 /* VideoCell.swift */,
-				BABAC88928AE97B500C3F106 /* VideoCell.xib */,
+				BAC109B728E9A8F00087B135 /* VideoCell */,
+				BAC109BC28E9AA200087B135 /* ExamTableViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,7 +288,6 @@
 			name = Groupy;
 			packageProductDependencies = (
 				BABC762C28646AB8002ED34E /* Alamofire */,
-				BABC762F28646C81002ED34E /* SwiftyJSON */,
 			);
 			productName = Groupy;
 			productReference = BAD40DB42827C0F1006AF832 /* Groupy.app */;
@@ -286,7 +319,6 @@
 			mainGroup = BAD40DAB2827C0F1006AF832;
 			packageReferences = (
 				BABC762B28646AB8002ED34E /* XCRemoteSwiftPackageReference "Alamofire" */,
-				BABC762E28646C81002ED34E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = BAD40DB52827C0F1006AF832 /* Products */;
 			projectDirPath = "";
@@ -302,11 +334,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC109BB28E9AA1B0087B135 /* ExamTableViewCell.xib in Resources */,
 				BABAC88B28AE97B500C3F106 /* VideoCell.xib in Resources */,
 				BAD40DC42827C0F2006AF832 /* LaunchScreen.storyboard in Resources */,
 				BAD40DC12827C0F2006AF832 /* Assets.xcassets in Resources */,
 				BAB8276F2834FDB800A251D0 /* RegisterStoryboard.storyboard in Resources */,
 				BAD40DBF2827C0F1006AF832 /* Main.storyboard in Resources */,
+				BAC109B628E9A8D80087B135 /* Exams.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +404,12 @@
 				BA4D84AB28285559007D6867 /* LoginVC.swift in Sources */,
 				BABC762828644745002ED34E /* Constants.swift in Sources */,
 				BAD40DB82827C0F1006AF832 /* AppDelegate.swift in Sources */,
+				BAC109C228E9B23F0087B135 /* ExamsVC.swift in Sources */,
 				BAA3B3F028B5610500263B84 /* VideosModel.swift in Sources */,
 				BAA8482F282900E800D42CE6 /* RegisterVC.swift in Sources */,
 				BAD40DD62827EB0D006AF832 /* SlideModel.swift in Sources */,
 				BAFCC7E428AC1D6B007CD5A9 /* ListsOfVideos.swift in Sources */,
+				BAC109BA28E9AA1B0087B135 /* ExamTableViewCell.swift in Sources */,
 				BAA3D80728A46B8000C7EF94 /* QRCodeVC.swift in Sources */,
 				BAC7B6FB282A7FA600569288 /* UIView + Extensions.swift in Sources */,
 				BAD40DBA2827C0F1006AF832 /* SceneDelegate.swift in Sources */,
@@ -602,14 +638,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		BABC762E28646C81002ED34E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -617,11 +645,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BABC762B28646AB8002ED34E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		BABC762F28646C81002ED34E /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BABC762E28646C81002ED34E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

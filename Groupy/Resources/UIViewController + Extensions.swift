@@ -60,7 +60,6 @@ extension UIViewController  {
         present(vc, animated: true, completion: nil)
     }
     
-    
     // custom func for present View Controller as Navigation Controller
     func presentDetail(_ viewControllerTopresent : UIViewController){
         let transition = CATransition()
@@ -98,7 +97,7 @@ extension UIViewController  {
         dismiss(animated: false, completion: nil)
     }
     
-    // Function To create
+    // Function To create Bar Button item
     
     func createBarButtonItem()  {
              title = "قوائم الفيديوهات"

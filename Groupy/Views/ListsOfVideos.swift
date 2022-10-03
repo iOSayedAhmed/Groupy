@@ -52,8 +52,6 @@ class ListsOfVideos: UIViewController, YTPlayerViewDelegate {
             }
                }
     }
-    
-
 
 
 }
@@ -68,7 +66,6 @@ extension ListsOfVideos:UITableViewDelegate,UITableViewDataSource  {
        // cell.PlayerView.backgroundColor = .black
         cell.numberOfVideoLabel.text = "\(indexPath.item + 1)"
         cell.PlayerView.load(withVideoId: urlArray[indexPath.item])
-//        cell.PlayerView.loadVideo(byURL: "https://youtu.be/eLYizanla8A", startSeconds: 0.0, suggestedQuality: YTPlaybackQuality.small)
        
      
 
