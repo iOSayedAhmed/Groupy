@@ -20,6 +20,14 @@ extension UIViewController  {
         return storyboard.instantiateViewController(withIdentifier: indenteifier) as! Self
     }
     
+    static func loadFromNib() -> Self {
+        func instantiateFromNib<T: UIViewController>() -> T {
+            return T.init(nibName: String(describing: T.self), bundle: nil)
+        }
+
+        return instantiateFromNib()
+    }
+    
     
     // Alert Controller
     func showAlert( _ title:String , _ message:String , _ actionTitle:String) {

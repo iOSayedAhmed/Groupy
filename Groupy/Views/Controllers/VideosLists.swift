@@ -40,6 +40,7 @@ extension VideosLists : UICollectionViewDelegate,UICollectionViewDataSource , UI
         return cell
     }
     
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
@@ -50,7 +51,6 @@ extension VideosLists : UICollectionViewDelegate,UICollectionViewDataSource , UI
         let width  = (view.frame.width-30)/2
         return CGSize(width: width, height: width)
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
         APIServices.shared.postRequest(url: "select_videos.php", parameter: ["video_list_id":lists[indexPath.item].id], method: nil, headers: nil) {(listOfVideos:[VideosModel]? , error) in
@@ -60,7 +60,7 @@ extension VideosLists : UICollectionViewDelegate,UICollectionViewDataSource , UI
             }else {
                 //Success
                 guard let listOfVideos = listOfVideos else { return }
-                DispatchQueue.main.async {
+              //  DispatchQueue.main.async {
                     let vc =  ListsOfVideos.instantiate()
                     vc.listOfVideos = listOfVideos
                     vc.indexFlag = indexPath.item
@@ -70,7 +70,7 @@ extension VideosLists : UICollectionViewDelegate,UICollectionViewDataSource , UI
                     nav.modalPresentationStyle = .fullScreen
                     self.presentDetail(nav)
                 }
-            }
+           // }
             
         }
        

@@ -19,13 +19,23 @@
 		BAA66E9C28B25B3C008DE658 /* VideoListsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA66E9B28B25B3C008DE658 /* VideoListsModel.swift */; };
 		BAA8482F282900E800D42CE6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8482D282900E800D42CE6 /* RegisterVC.swift */; };
 		BAAED45428A25F4500DB8B1A /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAED45328A25F4500DB8B1A /* LocalState.swift */; };
+		BAB727F228EF44FE000B2358 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB727F028EF4387000B2358 /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BAB8276F2834FDB800A251D0 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB827712834FDB800A251D0 /* RegisterStoryboard.storyboard */; };
-		BABAC88A28AE97B500C3F106 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABAC88828AE97B500C3F106 /* VideoCell.swift */; };
-		BABAC88B28AE97B500C3F106 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABAC88928AE97B500C3F106 /* VideoCell.xib */; };
+		BAB839AD28FF514C00117739 /* PDFsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB839AB28FF514C00117739 /* PDFsCell.swift */; };
+		BAB839AE28FF514C00117739 /* PDFsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB839AC28FF514C00117739 /* PDFsCell.xib */; };
+		BAB839B128FF552700117739 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB839AF28FF552700117739 /* VideoCell.swift */; };
+		BAB839B228FF552700117739 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB839B028FF552700117739 /* VideoCell.xib */; };
+		BAB839B428FF582100117739 /* PDFsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB839B328FF582100117739 /* PDFsVC.swift */; };
+		BAB839B628FF5BEF00117739 /* PDFs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB839B528FF5BEF00117739 /* PDFs.storyboard */; };
 		BABC76262864465F002ED34E /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC76252864465F002ED34E /* APIServices.swift */; };
 		BABC762828644745002ED34E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC762728644745002ED34E /* Constants.swift */; };
 		BABC762A28644CF3002ED34E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABC762928644CF3002ED34E /* UserModel.swift */; };
 		BABC762D28646AB8002ED34E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BABC762C28646AB8002ED34E /* Alamofire */; };
+		BABDD9A928F2F870002557B4 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD9A728F2F870002557B4 /* ForgetPasswordVC.swift */; };
+		BABDD9AA28F2F870002557B4 /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABDD9A828F2F870002557B4 /* ForgetPasswordVC.xib */; };
+		BABDD9AD28F2FBA1002557B4 /* VerifyCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD9AB28F2FBA1002557B4 /* VerifyCodeVC.swift */; };
+		BABDD9AE28F2FBA1002557B4 /* VerifyCodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABDD9AC28F2FBA1002557B4 /* VerifyCodeVC.xib */; };
+		BABDD9B428F306D8002557B4 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD9B328F306D8002557B4 /* OneTimeCodeTextField.swift */; };
 		BAC109B628E9A8D80087B135 /* Exams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC109B528E9A8D80087B135 /* Exams.storyboard */; };
 		BAC109BA28E9AA1B0087B135 /* ExamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC109B828E9AA1B0087B135 /* ExamTableViewCell.swift */; };
 		BAC109BB28E9AA1B0087B135 /* ExamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC109B928E9AA1B0087B135 /* ExamTableViewCell.xib */; };
@@ -43,6 +53,8 @@
 		BAD40DC42827C0F2006AF832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD40DC22827C0F2006AF832 /* LaunchScreen.storyboard */; };
 		BAD40DD42827EA5F006AF832 /* OnboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD40DD32827EA5F006AF832 /* OnboardCell.swift */; };
 		BAD40DD62827EB0D006AF832 /* SlideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD40DD52827EB0D006AF832 /* SlideModel.swift */; };
+		BAF0266228F7080F002C5152 /* ConfirmPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0266028F7080F002C5152 /* ConfirmPasswordVC.swift */; };
+		BAF0266328F7080F002C5152 /* ConfirmPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF0266128F7080F002C5152 /* ConfirmPasswordVC.xib */; };
 		BAFCC7E428AC1D6B007CD5A9 /* ListsOfVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFCC7E328AC1D6B007CD5A9 /* ListsOfVideos.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +73,22 @@
 		BAA66E9B28B25B3C008DE658 /* VideoListsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListsModel.swift; sourceTree = "<group>"; };
 		BAA8482D282900E800D42CE6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		BAAED45328A25F4500DB8B1A /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		BAB727F028EF4387000B2358 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BAB827702834FDB800A251D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
-		BABAC88828AE97B500C3F106 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
-		BABAC88928AE97B500C3F106 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		BAB839AB28FF514C00117739 /* PDFsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFsCell.swift; sourceTree = "<group>"; };
+		BAB839AC28FF514C00117739 /* PDFsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFsCell.xib; sourceTree = "<group>"; };
+		BAB839AF28FF552700117739 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		BAB839B028FF552700117739 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		BAB839B328FF582100117739 /* PDFsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFsVC.swift; sourceTree = "<group>"; };
+		BAB839B528FF5BEF00117739 /* PDFs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PDFs.storyboard; sourceTree = "<group>"; };
 		BABC76252864465F002ED34E /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
 		BABC762728644745002ED34E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BABC762928644CF3002ED34E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BABDD9A728F2F870002557B4 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		BABDD9A828F2F870002557B4 /* ForgetPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordVC.xib; sourceTree = "<group>"; };
+		BABDD9AB28F2FBA1002557B4 /* VerifyCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeVC.swift; sourceTree = "<group>"; };
+		BABDD9AC28F2FBA1002557B4 /* VerifyCodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyCodeVC.xib; sourceTree = "<group>"; };
+		BABDD9B328F306D8002557B4 /* OneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeCodeTextField.swift; sourceTree = "<group>"; };
 		BAC109B528E9A8D80087B135 /* Exams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exams.storyboard; sourceTree = "<group>"; };
 		BAC109B828E9AA1B0087B135 /* ExamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTableViewCell.swift; sourceTree = "<group>"; };
 		BAC109B928E9AA1B0087B135 /* ExamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamTableViewCell.xib; sourceTree = "<group>"; };
@@ -86,6 +108,8 @@
 		BAD40DC52827C0F2006AF832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD40DD32827EA5F006AF832 /* OnboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCell.swift; sourceTree = "<group>"; };
 		BAD40DD52827EB0D006AF832 /* SlideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideModel.swift; sourceTree = "<group>"; };
+		BAF0266028F7080F002C5152 /* ConfirmPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordVC.swift; sourceTree = "<group>"; };
+		BAF0266128F7080F002C5152 /* ConfirmPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmPasswordVC.xib; sourceTree = "<group>"; };
 		BAFCC7E328AC1D6B007CD5A9 /* ListsOfVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListsOfVideos.swift; path = Groupy/Views/ListsOfVideos.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -94,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB727F228EF44FE000B2358 /* XCTest.framework in Frameworks */,
 				649E20D613817C87E152AD9F /* Pods_Groupy.framework in Frameworks */,
 				BABC762D28646AB8002ED34E /* Alamofire in Frameworks */,
 			);
@@ -110,6 +135,15 @@
 			path = LocalState;
 			sourceTree = "<group>";
 		};
+		BAB8399E28FF4F7400117739 /* PDFsCell */ = {
+			isa = PBXGroup;
+			children = (
+				BAB839AB28FF514C00117739 /* PDFsCell.swift */,
+				BAB839AC28FF514C00117739 /* PDFsCell.xib */,
+			);
+			path = PDFsCell;
+			sourceTree = "<group>";
+		};
 		BABC762428644648002ED34E /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +156,8 @@
 		BAC109B728E9A8F00087B135 /* VideoCell */ = {
 			isa = PBXGroup;
 			children = (
-				BABAC88828AE97B500C3F106 /* VideoCell.swift */,
-				BABAC88928AE97B500C3F106 /* VideoCell.xib */,
+				BAB839AF28FF552700117739 /* VideoCell.swift */,
+				BAB839B028FF552700117739 /* VideoCell.xib */,
 			);
 			path = VideoCell;
 			sourceTree = "<group>";
@@ -144,6 +178,13 @@
 				BAC109B528E9A8D80087B135 /* Exams.storyboard */,
 				BAB827712834FDB800A251D0 /* RegisterStoryboard.storyboard */,
 				BAD40DC22827C0F2006AF832 /* LaunchScreen.storyboard */,
+				BABDD9A728F2F870002557B4 /* ForgetPasswordVC.swift */,
+				BABDD9A828F2F870002557B4 /* ForgetPasswordVC.xib */,
+				BABDD9AB28F2FBA1002557B4 /* VerifyCodeVC.swift */,
+				BABDD9AC28F2FBA1002557B4 /* VerifyCodeVC.xib */,
+				BAF0266028F7080F002C5152 /* ConfirmPasswordVC.swift */,
+				BAF0266128F7080F002C5152 /* ConfirmPasswordVC.xib */,
+				BAB839B528FF5BEF00117739 /* PDFs.storyboard */,
 			);
 			path = Storybords;
 			sourceTree = "<group>";
@@ -172,7 +213,7 @@
 				BAD40DCF2827D702006AF832 /* Basic */,
 				BA12460228A50B0400C8F386 /* LocalState */,
 				BABC762428644648002ED34E /* Service */,
-				BAD40DCE2827D6EE006AF832 /* Resources */,
+				BAD40DCE2827D6EE006AF832 /* Helpers */,
 				BAD40DCD2827D6E5006AF832 /* Models */,
 				BAD40DCC2827D6DA006AF832 /* Views */,
 				BA0DA67428ABC3A700BACF8F /* VideosListsCell.swift */,
@@ -196,6 +237,7 @@
 				BAFCC7E328AC1D6B007CD5A9 /* ListsOfVideos.swift */,
 				BAC7B6FE282A927000569288 /* Navigation.swift */,
 				BAC109C128E9B23F0087B135 /* ExamsVC.swift */,
+				BAB839B328FF582100117739 /* PDFsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +249,7 @@
 				BAD40DCB2827D6C6006AF832 /* Controllers */,
 				BAD40DD02827E9B1006AF832 /* Onboarding */,
 				BAC109B728E9A8F00087B135 /* VideoCell */,
+				BAB8399E28FF4F7400117739 /* PDFsCell */,
 				BAC109BC28E9AA200087B135 /* ExamTableViewCell */,
 			);
 			path = Views;
@@ -223,14 +266,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BAD40DCE2827D6EE006AF832 /* Resources */ = {
+		BAD40DCE2827D6EE006AF832 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				BAC7B6FA282A7FA600569288 /* UIView + Extensions.swift */,
 				BAC7B700282A963B00569288 /* UIViewController + Extensions.swift */,
 				BA62A877282ACDCE00CEB876 /* CustomTextField.swift */,
+				BABDD9B328F306D8002557B4 /* OneTimeCodeTextField.swift */,
 			);
-			path = Resources;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BAD40DCF2827D702006AF832 /* Basic */ = {
@@ -254,6 +298,7 @@
 		CF76326B5CB0971B992E6DB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAB727F028EF4387000B2358 /* XCTest.framework */,
 				9077E831D06518ADA9878065 /* Pods_Groupy.framework */,
 			);
 			name = Frameworks;
@@ -335,11 +380,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC109BB28E9AA1B0087B135 /* ExamTableViewCell.xib in Resources */,
-				BABAC88B28AE97B500C3F106 /* VideoCell.xib in Resources */,
+				BAF0266328F7080F002C5152 /* ConfirmPasswordVC.xib in Resources */,
+				BAB839B228FF552700117739 /* VideoCell.xib in Resources */,
+				BAB839B628FF5BEF00117739 /* PDFs.storyboard in Resources */,
 				BAD40DC42827C0F2006AF832 /* LaunchScreen.storyboard in Resources */,
 				BAD40DC12827C0F2006AF832 /* Assets.xcassets in Resources */,
 				BAB8276F2834FDB800A251D0 /* RegisterStoryboard.storyboard in Resources */,
+				BABDD9AE28F2FBA1002557B4 /* VerifyCodeVC.xib in Resources */,
+				BABDD9AA28F2F870002557B4 /* ForgetPasswordVC.xib in Resources */,
 				BAD40DBF2827C0F1006AF832 /* Main.storyboard in Resources */,
+				BAB839AE28FF514C00117739 /* PDFsCell.xib in Resources */,
 				BAC109B628E9A8D80087B135 /* Exams.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,16 +443,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB839AD28FF514C00117739 /* PDFsCell.swift in Sources */,
 				BAD40DBC2827C0F1006AF832 /* OnboardVC.swift in Sources */,
 				BAC7B6F9282A6F4800569288 /* HomeVC.swift in Sources */,
 				BA62A87A282AD95D00CEB876 /* ProfileVC.swift in Sources */,
 				BAD40DD42827EA5F006AF832 /* OnboardCell.swift in Sources */,
+				BABDD9A928F2F870002557B4 /* ForgetPasswordVC.swift in Sources */,
 				BAA66E9C28B25B3C008DE658 /* VideoListsModel.swift in Sources */,
 				BABC76262864465F002ED34E /* APIServices.swift in Sources */,
 				BAC7B6FF282A927000569288 /* Navigation.swift in Sources */,
 				BAA3D80528A46B6400C7EF94 /* SettingVC.swift in Sources */,
+				BABDD9B428F306D8002557B4 /* OneTimeCodeTextField.swift in Sources */,
+				BAB839B428FF582100117739 /* PDFsVC.swift in Sources */,
 				BA4D84AB28285559007D6867 /* LoginVC.swift in Sources */,
 				BABC762828644745002ED34E /* Constants.swift in Sources */,
+				BAF0266228F7080F002C5152 /* ConfirmPasswordVC.swift in Sources */,
 				BAD40DB82827C0F1006AF832 /* AppDelegate.swift in Sources */,
 				BAC109C228E9B23F0087B135 /* ExamsVC.swift in Sources */,
 				BAA3B3F028B5610500263B84 /* VideosModel.swift in Sources */,
@@ -411,10 +466,11 @@
 				BAFCC7E428AC1D6B007CD5A9 /* ListsOfVideos.swift in Sources */,
 				BAC109BA28E9AA1B0087B135 /* ExamTableViewCell.swift in Sources */,
 				BAA3D80728A46B8000C7EF94 /* QRCodeVC.swift in Sources */,
+				BABDD9AD28F2FBA1002557B4 /* VerifyCodeVC.swift in Sources */,
 				BAC7B6FB282A7FA600569288 /* UIView + Extensions.swift in Sources */,
+				BAB839B128FF552700117739 /* VideoCell.swift in Sources */,
 				BAD40DBA2827C0F1006AF832 /* SceneDelegate.swift in Sources */,
 				BAAED45428A25F4500DB8B1A /* LocalState.swift in Sources */,
-				BABAC88A28AE97B500C3F106 /* VideoCell.swift in Sources */,
 				BAC7B701282A963B00569288 /* UIViewController + Extensions.swift in Sources */,
 				BAC7B6FD282A920100569288 /* VideosLists.swift in Sources */,
 				BABC762A28644CF3002ED34E /* UserModel.swift in Sources */,
@@ -489,7 +545,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -550,6 +606,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

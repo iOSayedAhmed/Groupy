@@ -15,6 +15,7 @@ class ListsOfVideos: UIViewController, YTPlayerViewDelegate {
     var listOfVideos = [VideosModel]()
     var indexFlag = Int()
     var urlArray = [String]()
+   
     
     
     @IBOutlet weak var playerView: YTPlayerView!
@@ -59,20 +60,19 @@ extension ListsOfVideos:UITableViewDelegate,UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfVideos.count
     }
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
         cell.backgroundColor = .systemBackground
         cell.PlayerView.delegate = self
        // cell.PlayerView.backgroundColor = .black
-        cell.numberOfVideoLabel.text = "\(indexPath.item + 1)"
+        cell.videoNameLabel.text = "\(indexPath.item + 1)"
         cell.PlayerView.load(withVideoId: urlArray[indexPath.item])
        
      
 
         return cell
     }
-
-
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (view.frame.height / 4)

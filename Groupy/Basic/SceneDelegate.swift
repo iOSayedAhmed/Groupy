@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }else {
             controller = OnboardVC.instantiate()
         }
+      
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
         

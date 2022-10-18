@@ -9,4 +9,7 @@
 import Foundation
 struct Constants {
     static let Baseurl = "https://eduelmester.site/elmester/student/"
+    
+    static let loginURL = URL(string: "https://eduelmester.site/elmester/student/student_login.php")
+    
 }

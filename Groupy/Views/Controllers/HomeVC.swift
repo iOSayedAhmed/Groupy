@@ -85,6 +85,31 @@ class HomeVC: UIViewController {
         
     }
     
+    @IBAction func pdfListClickedButton(_ sender: UIButton) {
+       // print("Present Exams List ----> ")
+        //showAlert("تنوية", "نعمل من أجل حضراتكم ..  يتم العمل عليها ", "إلغاء")
+        
+            let vc = UIStoryboard(name: "PDFs", bundle: nil).instantiateViewController(identifier: "PDFsVC") as! PDFsVC
+            let nav = UINavigationController(rootViewController: vc)
+            nav.navigationBar.tintColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+            nav.navigationBar.backgroundColor = #colorLiteral(red: 0.1929970086, green: 0.2383353114, blue: 0.285562396, alpha: 1)
+            if #available(iOS 15, *) {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = UIColor(red: 0.19, green: 0.238, blue: 0.2855, alpha: 1)
+                appearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+                UINavigationBar.appearance().standardAppearance = appearance
+                UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            }
+            nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            vc.title  = "قوائم الملفات"
+            nav.modalPresentationStyle = .fullScreen
+            
+            self.presentDetail(nav)
+        
+        
+        
+    }
     func getVideosLists() {
         
         

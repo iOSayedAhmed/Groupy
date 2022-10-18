@@ -23,7 +23,12 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPasswordClickedButton(_ sender: UIButton) {
-        print("forgot password")
+        let vc = ForgetPasswordVC.loadFromNib()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+        
+        
+        
     }
     @IBAction func loginClickedButton(_ sender: UIButton) {
         
@@ -40,6 +45,9 @@ class LoginVC: UIViewController {
         if let email = emailTextField.text , let password = passwordTextField.text , !email.isEmpty && !password.isEmpty  {
             parameters = ["email":email,"password":password,"id_addess":""]
             DispatchQueue.global(qos: .background).async {
+                
+               
+                
                 APIServices.shared.postRequest(url: "student_login.php", parameter: self.parameters, method: nil, headers: nil ){ (userResponse:UserModel?,error) in
                     if let error = error {
                         //TODO
@@ -48,7 +56,7 @@ class LoginVC: UIViewController {
                             self.showAlert("خطأ ❌", "من فضلك تأكد من البريد الإلكتروني وكلمة السر ", "تـم")
                         }
                         print(error)
-                        
+
                     }else {
                         print(" Successful Login")
                         print(userResponse?.phone)
@@ -66,16 +74,17 @@ class LoginVC: UIViewController {
 //                            self.present(alert, animated:true)
 //
 //                        }
-                        
+//
                     }
                     
                 }
             }
-        }else {
+      }
+        else {
             DispatchQueue.main.async {
                 self.showAlert("خطأ", "من فضلك أملأ جميع البيانات", "تم")
             }
-            
+
         }
     }
     
